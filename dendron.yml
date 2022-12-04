@@ -117,4 +117,4 @@ publishing:
         action: useVault
         payload:
             - notes
-    theme: light
+    theme: dark
