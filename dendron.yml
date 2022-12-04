@@ -111,7 +111,7 @@ publishing:
     enablePrettyLinks: true
     searchMode: lookup
     enableMermaid: true
-    assetsPrefix: /Dendron-Template
+    assetsPrefix: /MATH-490-Project
     siteUrl: https://Mjvolk3.github.io
     duplicateNoteBehavior:
         action: useVault
