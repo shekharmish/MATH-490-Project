@@ -26,7 +26,7 @@ workspace:
     vaults:
         -
             fsPath: .
-            name: /Dendron-Template
+            name: MATH-490-Project
             selfContained: true
     journal:
         dailyDomain: daily
@@ -41,7 +41,7 @@ workspace:
         zoomSpeed: 1
         createStub: false
     enableAutoCreateOnDefinition: false
-    enableXVaultWikiLink: true
+    enableXVaultWikiLink: false
     enableRemoteVaultInit: true
     workspaceVaultSyncMode: noCommit
     enableAutoFoldFrontmatter: false
@@ -80,7 +80,7 @@ preview:
     enableFMTitle: true
     enableNoteTitleForLink: true
     enableMermaid: true
-    enablePrettyRefs: true
+    enablePrettyRefs: false
     enableKatex: true
     automaticallyShowPreview: false
     enableFrontmatterTags: true

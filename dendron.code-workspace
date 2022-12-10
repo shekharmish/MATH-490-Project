@@ -3,7 +3,7 @@
         {
             "name": "MATH-490-Project",
             "path": "."
-        },
+        }
     ],
     "settings": {
         "dendron.rootDir": ".",
