@@ -4,6 +4,7 @@ title: Project
 desc: ''
 updated: 1670649935439
 created: 1670642038825
+enableGiscus: true
 ---
 ## Introduction
 ![[project.introduction#message-passing-framework]]

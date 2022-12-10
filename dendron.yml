@@ -118,3 +118,17 @@ publishing:
         payload:
             - notes
     theme: dark
+    giscus:
+        id: "comments"
+        repo: "Mjvolk3/MATH-490-Project"
+        repoId: "R_kgDOIjXV1w"
+        category: "Announcements"
+        categoryId: "DIC_kwDOIjXV184CTACu"
+        mapping: "pathname"
+        theme: "dark_dimmed"
+        strict: "0"
+        reactionsEnabled: "1"
+        emitMetadata: "0"
+        inputPosition: "bottom"
+        lang: "en"
+        loading: "lazy"
