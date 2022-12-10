@@ -18,7 +18,7 @@ $\phi^{(k)}$ - Differentiable functions such as Multi-Layer Perceptrons (MLPs)
 $\gamma^{(k)}$ - Differentiable functions such MLPs
 
 
-#### Toy Example
+### Toy Example
 
 To gain some intuition of a message passing framework we will take a small graph as example.
 
@@ -26,11 +26,34 @@ To gain some intuition of a message passing framework we will take a small graph
 
 We will consider messages passed to node $D$ in a 2-layer message passing neural network. The computational graph can be traced out from node $D$ first to a 1-hop neighborhood and then to a 2-hop neighborhood. The 1-hop neighborhood contains all nodes except node $A$. Including node $D$ is often considered optional and is can be interpreted as adding self-loops to the graph. Layer 0 looks shows connections from the 2-hop neighborhood of node $D$.
 
+### Popular Message Passing Neural Networks
 
-#### GCN
+#### GCN [^1]
 
-#### GAT
+[^1]: [GCNConv](https://pytorch-geometric.readthedocs.io/en/latest/modules/nn.html#torch_geometric.nn.conv.GCNConv)
 
-#### GIN
+$$
+\mathbf{x}_i^{(k)}=\sum_{j \in \mathcal{N}(i) \cup\{i\}} \frac{1}{\sqrt{\operatorname{deg}(i)} \cdot \sqrt{\operatorname{deg}(j)}} \cdot\left(\boldsymbol{\Theta}^{\top} \cdot \mathbf{x}_j^{(k-1)}\right)
+$$
 
+#### GAT [^2]
 
+[^2]: [GATv2Conv](https://pytorch-geometric.readthedocs.io/en/latest/modules/nn.html#torch_geometric.nn.conv.GATv2Conv)
+
+$$
+\mathbf{x}_i^{\prime}=\alpha_{i, i} \boldsymbol{\Theta} \mathbf{x}_i+\sum_{j \in \mathcal{N}(i)} \alpha_{i, j} \boldsymbol{\Theta} \mathbf{x}_j
+$$
+
+$$
+\alpha_{i, j}=\frac{\exp \left(\mathbf{a}^{\top} \operatorname{LeakyReLU}\left(\boldsymbol{\Theta}\left[\mathbf{x}_i \| \mathbf{x}_j\right]\right)\right)}{\sum_{k \in \mathcal{N}(i) \cup\{i\}} \exp \left(\mathbf{a}^{\top} \operatorname{LeakyReLU}\left(\mathbf{\Theta}\left[\mathbf{x}_i \| \mathbf{x}_k\right]\right)\right)}
+$$
+
+#### GIN [^3]
+
+[^3]: [PyG-GINConv](https://pytorch-geometric.readthedocs.io/en/latest/modules/nn.html#torch_geometric.nn.conv.GINConv)
+
+$$
+\mathbf{x}_i^{\prime}=h_{\Theta}\left((1+\epsilon) \cdot \mathbf{x}_i+\sum_{j \in \mathcal{N}(i)} \mathbf{x}_j\right)
+$$
+
+Where $h_{\Theta}$ denotes a neural network, .i.e. an MLP.
