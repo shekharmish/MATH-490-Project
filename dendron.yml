@@ -75,11 +75,9 @@ workspace:
     dendronVersion: 0.95.0
     enableEditorDecorations: true
     enableFullHierarchyNoteTitle: false
-    enableSmartRefs: false
 preview:
     enableFMTitle: true
     enableNoteTitleForLink: true
-    enableMermaid: true
     enablePrettyRefs: false
     enableKatex: true
     automaticallyShowPreview: false
@@ -110,7 +108,6 @@ publishing:
     enableTaskNotes: true
     enablePrettyLinks: true
     searchMode: lookup
-    enableMermaid: true
     assetsPrefix: /MATH-490-Project
     siteUrl: https://Mjvolk3.github.io
     duplicateNoteBehavior:
@@ -119,16 +116,16 @@ publishing:
             - notes
     theme: dark
     giscus:
-        id: "comments"
-        repo: "Mjvolk3/MATH-490-Project"
-        repoId: "R_kgDOIjXV1w"
-        category: "Announcements"
-        categoryId: "DIC_kwDOIjXV184CTACu"
-        mapping: "pathname"
-        theme: "dark_dimmed"
-        strict: "0"
-        reactionsEnabled: "1"
-        emitMetadata: "0"
-        inputPosition: "bottom"
-        lang: "en"
-        loading: "lazy"
+        id: comments
+        repo: Mjvolk3/MATH-490-Project
+        repoId: R_kgDOIjXV1w
+        category: Announcements
+        categoryId: DIC_kwDOIjXV184CTACu
+        mapping: pathname
+        theme: dark_dimmed
+        strict: '0'
+        reactionsEnabled: '1'
+        emitMetadata: '0'
+        inputPosition: bottom
+        lang: en
+        loading: lazy
