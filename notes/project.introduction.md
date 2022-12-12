@@ -2,7 +2,7 @@
 id: 6je8bh4fpqfkr49ekm38lml
 title: Introduction
 desc: ''
-updated: 1670790218817
+updated: 1670835554391
 created: 1670641852737
 enableGiscus: true
 ---
@@ -75,7 +75,7 @@ We will consider messages passed to node $D$ in a 2-layer message passing neural
 
 ![](./assets/drawio/GAT.drawio.png)
 
-- The attention mechanism was made famouse in the transformer paper that used a pair wise attention across the entire input vector. Sometimes the attention mechanism applied to GAT is called masked attention, becuase it only considers edges within the underlying graph, "masking" or zeroing out all other attention coefficients.
+- The attention mechanism was made famous in the transformer paper that used a pair wise attention across the entire input vector. Sometimes the attention mechanism applied to GAT is called masked attention, because it only considers edges within the underlying graph, "masking" or zeroing out all other attention coefficients.
 
 - Attention weights are computed as a softmax of learned attention coefficients giving a value ranging from 0 to 1 for each attention weight in the attention matrix $\alpha$. The sum over any given row or column will be 0. The attention matrix $\alpha$ can be seen as weighted adjacency matrix where each of the non-zero elements is an attention weight. This maps on nicely to the matrix view of GAT.
 
