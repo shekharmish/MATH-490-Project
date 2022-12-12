@@ -2,7 +2,7 @@
 id: 6je8bh4fpqfkr49ekm38lml
 title: Introduction
 desc: ''
-updated: 1670724705677
+updated: 1670790218817
 created: 1670641852737
 enableGiscus: true
 ---
@@ -101,3 +101,4 @@ We will consider messages passed to node $D$ in a 2-layer message passing neural
 - The Graph Isomorphism Network (GIN) is a more complex version of the GCN that was published in 2019 by Keyulu Xu et al. This idea can be rationalized by the universal approximation theory of neural networks that shows nearly any function can be approximated by a two layer neural network. By passing the node representations through multiple layers of a Multi-Layer Percptron (MLP) the GIN is more complex in number of parameters but more more expressive in in the data distributions that can be learned.
 
 ![](./assets/drawio/GIN.drawio.png)
+
