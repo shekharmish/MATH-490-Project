@@ -1,4 +1,8 @@
 node_modules
-
+outputs
+dataset
+wandb
 .next
 .backup
+tmp
+**/__pycache__/**
