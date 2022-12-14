@@ -1,0 +1,109 @@
+### OPTIMIZATION_SWEEPER_AND_SAMPLER
+defaults:
+  # multirun defaults
+  - override hydra/sweeper: optuna
+  - override hydra/sweeper/sampler: grid
+  - _self_ # suppresses warning, recommended for default.yaml
+
+### HYDRA
+hydra:
+  #multirun... can be ignored since wandb sweep is used
+  sweeper:
+    direction: minimize
+    study_name: Gene_Graph
+    params:
+      optim.max_epoch: 2, 4
+      train.seed: 0, 1
+  ### HYDRA_LOGGING_SETTINGS - toggle to suppress output
+  hydra_logging:
+    loggers:
+      logging_example:
+        level: INFO
+
+### WANDB
+project: Gene_Graph
+wandb:
+  mode: disabled # disabled, offline, online
+  sweep: false # true, false... true will overwrite mode to "offline"
+
+data:
+  split: 0.2 # # Not implemented - #TODO
+  seed: 0 # Not implemented - #TODO
+
+model:
+  pre_mlp:
+    hidden_channels: 16
+    out_channels: 16
+    num_layers: 1
+    dropout: 0.2
+    act: relu
+    act_first: false
+    act_kwargs:
+    norm: BatchNorm #batch_norm default
+    norm_kwargs:
+      momentum: 0.1 #default
+    plain_last: true
+    bias: true
+
+  mp:
+    name: GCN
+    hidden_channels: 16  # GCN
+    num_layers: 1 # GCN
+    out_channels: 3 # GCN
+    dropout: 0.2 # GCN
+    act: relu # GCN
+    act_first: False # GCN
+    norm: PairNorm # GCN
+    norm_kwargs: # GCN
+    jk: # GCN
+
+  post_mlp:
+    hidden_channels: 16
+    out_channels: 16
+    num_layers: 1
+    dropout: 0.2
+    act: relu
+    act_first: false
+    act_kwargs:
+    norm: batch_norm
+    norm_kwargs:
+    plain_last: true
+    bias: true
+
+    pool:
+      name: diffpool
+      num_pool_layers: 4 #Current config gives 73,000 params
+      hidden_channels: 64 # DiffPool
+      num_layers: 3 # DiffPool
+      out_channels: 32 # DiffPool
+      out_channel_decay: 1.0 # DiffPool
+
+  global_mlp:
+    hidden_channels: 16
+    num_layers: 1
+    dropout: 0.2
+    act: relu
+    act_first: false
+    act_kwargs:
+    norm: # remove norm for readout if batch is 1
+    norm_kwargs:
+    plain_last: true
+    bias: true
+
+
+optim:
+  lr: 0.001
+  weight_decay: 0.0005
+
+criterion:
+  TODO:
+
+run:
+  batch_size: 2 # This is in run since it is done online
+  max_epoch: 2 #
+  test_epoch: 1 #TODO change to validation
+  start_test_epoch: 10
+
+prepare_data:
+  node_repr: subgraph # node-feature, node-augmentation
+  self_loops: true

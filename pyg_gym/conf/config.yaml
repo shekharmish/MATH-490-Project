@@ -1,0 +1,76 @@
+### DEFAULTS
+defaults:
+  # single run
+  - default
+  - _self_ # suppresses warning, recommended for default.yaml
+### WANDB
+project: MATH-490-Project-test
+wandb:
+  mode: online # disabled, offline, online
+  sweep: false # true, false... true will overwrite mode to "offline"
+  model_watch: false
+### WANDB-parameters
+init:
+  dev: true
+optim:
+  lr: 0.01 #BM
+  weight_decay: 0.0005 #BM
+criterion:
+  None: #TODO
+data:
+  num_classes: 37
+  batch_size: 2 # This is in run since it is done online #BM
+  shuffle: false
+  split: 0.2 # # Not implemented - #TODO
+  seed: 0 # Not implemented - #TODO
+model:
+  pre_mlp:
+    hidden_channels: 2 # 16 # #BM
+    out_channels: 4 # 16 # #BM
+    num_layers: 0 #BM
+    dropout: 0.2 # 0.2
+    plain_last: false # changed to false since this is not a readout
+    norm: BatchNorm
+    norm_kwargs:
+      allow_single_element: true
+  mp:
+    name: GIN
+    hidden_channels: 6 # 4 # GCN #BM
+    num_layers: 1 # GCN #BM
+    out_channels: 8 # 16 # GCN #BM
+    dropout: 0.2 # GCN
+    act: relu # GCN
+    act_first: False # GCN
+    norm: BatchNorm # GCN
+    norm_kwargs:
+      allow_single_element: true
+  post_mlp:
+    hidden_channels: 10 #BM
+    out_channels: 12 #BM
+    num_layers: 0 #BM
+    dropout: 0.2
+    plain_last: true
+    norm: BatchNorm
+    norm_kwargs:
+      allow_single_element: true
+  autoencoder:
+    name: null # GAE or null
+  pool:
+    name: max #BM # sum
+    num_pool_layers: 1 # #BM
+    hidden_channels: 1 # DiffPool #BM
+    out_channels: 1
+    num_layers: 1 # DiffPool #BM #TODO should probably decay with num_nodes
+    out_channel_decay: 1.0 # DiffPool #BM
+  global_mlp:
+    hidden_channels: 14 #BM
+    num_layers: 0 #BM
+    dropout: 0.2
+    plain_last: true
+    norm: BatchNorm
+    norm_kwargs:
+      allow_single_element: true
+run:
+  max_epoch: 10 #CHECK
+  valid_epoch: 2 #CHECK #TODO change to validation
+  start_valid_epoch: 2

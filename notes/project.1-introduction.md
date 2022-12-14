@@ -1,8 +1,8 @@
 ---
 id: 6je8bh4fpqfkr49ekm38lml
-title: Introduction
+title: 1 Introduction
 desc: ''
-updated: 1670835554391
+updated: 1670838391686
 created: 1670641852737
 enableGiscus: true
 ---
@@ -31,6 +31,8 @@ We will consider messages passed to node $D$ in a 2-layer message passing neural
 
 #### Graph Convolutional Neural Network ([GCN](https://pytorch-geometric.readthedocs.io/en/latest/modules/nn.html#torch_geometric.nn.conv.GCNConv))
 
+- [ ] update according to definition in pyg docs
+
 **Message Passing View**
 > $$
 > \mathbf{x}_i^{(k)}=\sum_{j \in \mathcal{N}(i) \cup\{i\}} \frac{1}{\sqrt{\operatorname{deg}(i)} \cdot \sqrt{\operatorname{deg}(j)}} \cdot\left(\boldsymbol{\Theta}^{\top} \cdot \mathbf{x}_j^{(k-1)}\right)
@@ -43,7 +45,7 @@ We will consider messages passed to node $D$ in a 2-layer message passing neural
 **Matrix View**
 > $X^l = \sigma(AX^{(k-1)}W)$
 
-- The Graph Convolutional Neural (GCN) network was first published by Thomas Kipf and Max Welling at the international conference for learning representations (ICLR) in 2017 @kipfSemiSupervisedClassificationGraph2017. This paper has had a tremndous impact on the development of graph neural networks and has sparked the design of more complicated and more expressive GNNs. To get an idea of the magnitude of impact, this paper currently has 14,095 citations whereas the famous transformer paper "Attention is all you need" has 59,941 citations.
+- The Graph Convolutional Neural (GCN) network was first published by Thomas Kipf and Max Welling at the international conference for learning representations (ICLR) in 2017 @kipfSemiSupervisedClassificationGraph2017. This paper has had a tremendous impact on the development of graph neural networks and has sparked the design of more complicated and more expressive GNNs. To get an idea of the magnitude of impact, this paper currently has 14,095 citations whereas the famous transformer paper "Attention is all you need" has 59,941 citations.
 
 ![](./assets/drawio/GCN.drawio.png)
 
