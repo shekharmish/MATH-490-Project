@@ -2,19 +2,19 @@
 id: mnwwke73vjuhtxqsv0ues8t
 title: 3 Experiments
 desc: ''
-updated: 1671083519352
+updated: 1671084051343
 created: 1670641888304
 enableGiscus: true
 ---
 ### Models
 To test the hypothesis that the GIN is more expressive we trained a GCN, GAT, and GIN model on a benchmark dataset provided by [OBG](https://ogb.stanford.edu/). The models are trained and then nodes representations are pooled to get a global representation of the graph for graph classification. All source code for the models can be found in the `pyg_gym` directory. Specifically the following files are used to train models:
-- [[pyg_gym/main.py]]
-- [[pyg_gym/metrics.py]]
-- [[pyg_gym/models.py]]
-- [[pyg_gym/mp.py]]
-- [[pyg_gym/pool.py]]
-- [[pyg_gym/runner.py]]
-- [[pyg_gym/config_override.py]]
+- [main.py](https://github.com/Mjvolk3/MATH-490-Project/blob/main/pyg_gym/main.py)
+- [metrics.py](https://github.com/Mjvolk3/MATH-490-Project/blob/main/pyg_gym/metrics.py)
+- [models.py](https://github.com/Mjvolk3/MATH-490-Project/blob/main/pyg_gym/models.py)
+- [mp.py](https://github.com/Mjvolk3/MATH-490-Project/blob/main/pyg_gym/mp.py)
+- [pool.py](https://github.com/Mjvolk3/MATH-490-Project/blob/main/pyg_gym/pool.py)
+- [runner.py](https://github.com/Mjvolk3/MATH-490-Project/blob/main/pyg_gym/runner.py)
+- [config_override.py](https://github.com/Mjvolk3/MATH-490-Project/blob/main/pyg_gym/config_override.py)
 
 ### OGB Data
 To familiarize yourself with the dataset we recommend reading the description of [obgb-ppa](https://ogb.stanford.edu/docs/graphprop/#ogbg-ppa). I have copied the relevant row from the data table provided. In brief, this is a graph classification tasks over 37 different classes.
