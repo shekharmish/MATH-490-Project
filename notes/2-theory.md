@@ -2,7 +2,7 @@
 id: s3ygu4j9fp19axdnsi3cgwy
 title: 2 Theory
 desc: ''
-updated: 1671083462194
+updated: 1671084944202
 created: 1670641876915
 enableGiscus: true
 ---
@@ -52,6 +52,3 @@ As we can see in the example different colors capture different $k$-hop neighbor
 In How Powerful are Graph Neural Networks, the GIN is proven to be at least as expressive as the WL test, whereas the GCN is shown to worse than the WL test in some cases[^2].
 
 [^2]:[How Powerful are Graph Neural Networks?](https://arxiv.org/pdf/1810.00826.pdf)
-
-
-enableGiscus: true
