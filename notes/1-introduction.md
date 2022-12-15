@@ -2,7 +2,7 @@
 id: 6je8bh4fpqfkr49ekm38lml
 title: 1 Introduction
 desc: ''
-updated: 1671080064729
+updated: 1671080149355
 created: 1670641852737
 enableGiscus: true
 ---
@@ -64,6 +64,8 @@ The Graph Convolutional Neural (GCN) network was first published by Thomas Kipf 
 [^2]: [Semi-Supervised Classification with Graph Convolutional Networks](https://arxiv.org/abs/1609.02907)
 
 ![](./assets/drawio/GCN.drawio.png)
+
+<!-- TODO update to OG Conv -->
 
 We can look at the first layer of the GCN to see how it passes messages. Each node vector is multiplied by a weight matrix $\boldsymbol{\Theta}^{\top}$ and then normalized by the product of degrees. This normalizing will prevent message vectors from exploding and it will remove degree bias.
 
