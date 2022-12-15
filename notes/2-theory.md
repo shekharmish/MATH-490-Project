@@ -2,7 +2,7 @@
 id: s3ygu4j9fp19axdnsi3cgwy
 title: 2 Theory
 desc: ''
-updated: 1670840732707
+updated: 1671078049996
 created: 1670641876915
 ---
 
