@@ -1,13 +1,7 @@
 ---
-id: nuyfwd7iokzd7m9oax0cdx5
+id: o8cp90pysu1qyc1hmml6ijr
 title: Root
 desc: ''
-updated: 1670649981013
-created: 1661538521294
+updated: 1671069759390
+created: 1671069759390
 ---
-## MATH 490 Project
-- Author: Michael Volk
-- Date: 2022.12.13
-
-## [[Project Page|project]]
-
