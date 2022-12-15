@@ -1,0 +1,53 @@
+<h1 id="3-experiments"><a aria-hidden="true" class="anchor-heading icon-link" href="#3-experiments"></a>3 Experiments</h1>
+<h3 id="models"><a aria-hidden="true" class="anchor-heading icon-link" href="#models"></a>Models</h3>
+<p>To test the hypothesis that the GIN is more expressive we trained a GCN, GAT, and GIN model on a benchmark dataset provided by <a href="https://ogb.stanford.edu/">OBG</a>. The models are trained and then nodes representations are pooled to get a global representation of the graph for graph classification. All source code for the models can be found in the <code>pyg_gym</code> directory. Specifically the following files are used to train models:</p>
+<ul>
+<li><a href="https://github.com/Mjvolk3/MATH-490-Project/blob/main/pyg_gym/main.py">main.py</a></li>
+<li><a href="https://github.com/Mjvolk3/MATH-490-Project/blob/main/pyg_gym/metrics.py">metrics.py</a></li>
+<li><a href="https://github.com/Mjvolk3/MATH-490-Project/blob/main/pyg_gym/models.py">models.py</a></li>
+<li><a href="https://github.com/Mjvolk3/MATH-490-Project/blob/main/pyg_gym/mp.py">mp.py</a></li>
+<li><a href="https://github.com/Mjvolk3/MATH-490-Project/blob/main/pyg_gym/pool.py">pool.py</a></li>
+<li><a href="https://github.com/Mjvolk3/MATH-490-Project/blob/main/pyg_gym/runner.py">runner.py</a></li>
+<li><a href="https://github.com/Mjvolk3/MATH-490-Project/blob/main/pyg_gym/config_override.py">config_override.py</a></li>
+</ul>
+<h3 id="ogb-data"><a aria-hidden="true" class="anchor-heading icon-link" href="#ogb-data"></a>OGB Data</h3>
+<p>To familiarize yourself with the dataset we recommend reading the description of <a href="https://ogb.stanford.edu/docs/graphprop/#ogbg-ppa">obgb-ppa</a>. I have copied the relevant row from the data table provided. In brief, this is a graph classification tasks over 37 different classes.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Scale</th><th>Name</th><th>Package</th><th>Num Graphs</th><th>Num Nodes per graph</th><th>Num lEdges per graph</th><th>Num Tasks</th><th>Split Type</th><th>Task Type</th><th>Metric</th></tr></thead><tbody><tr><td>Medium</td><td>ogbg-ppa</td><td>>=1.1.1</td><td>158,100</td><td>243.4</td><td>2,266.1</td><td>1</td><td>Species</td><td>Multi-class classification</td><td>Accuracy</td></tr></tbody></table>
+<h3 id="wandb"><a aria-hidden="true" class="anchor-heading icon-link" href="#wandb"></a>Wandb</h3>
+<p>All experiments can be viewed on <a href="https://wandb.ai/mjvolk3/MATH-490-Project?workspace=user-mjvolk3">wandb</a>. This workspace should be public access so comment below if it is not.</p>
+<!-- TODO update. -->
+<p>At the time of last commit, models were still in the process of training so I did not pull in their key results.</p>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/">Project</a></li>
+</ul>

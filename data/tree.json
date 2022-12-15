@@ -1,0 +1,58 @@
+{
+  "roots": [
+    {
+      "key": "o8cp90pysu1qyc1hmml6ijr",
+      "title": "Project",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "MATH-490-Project",
+      "navExclude": false,
+      "children": [
+        {
+          "key": "6je8bh4fpqfkr49ekm38lml",
+          "title": "1 Introduction",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "MATH-490-Project",
+          "navExclude": false,
+          "children": []
+        },
+        {
+          "key": "s3ygu4j9fp19axdnsi3cgwy",
+          "title": "2 Theory",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "MATH-490-Project",
+          "navExclude": false,
+          "children": []
+        },
+        {
+          "key": "mnwwke73vjuhtxqsv0ues8t",
+          "title": "3 Experiments",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "MATH-490-Project",
+          "navExclude": false,
+          "children": []
+        },
+        {
+          "key": "sd5ytaw21xcd930bh743g40",
+          "title": "4 Future",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "MATH-490-Project",
+          "navExclude": false,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "child2parent": {
+    "403": null,
+    "o8cp90pysu1qyc1hmml6ijr": null,
+    "sd5ytaw21xcd930bh743g40": "o8cp90pysu1qyc1hmml6ijr",
+    "mnwwke73vjuhtxqsv0ues8t": "o8cp90pysu1qyc1hmml6ijr",
+    "s3ygu4j9fp19axdnsi3cgwy": "o8cp90pysu1qyc1hmml6ijr",
+    "6je8bh4fpqfkr49ekm38lml": "o8cp90pysu1qyc1hmml6ijr"
+  }
+}

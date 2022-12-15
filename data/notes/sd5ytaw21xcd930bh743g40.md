@@ -1,0 +1,2 @@
+- Compare GCN and GIN with the [WLConv](https://pytorch-geometric.readthedocs.io/en/latest/modules/nn.html#torch_geometric.nn.conv.WLConv), which equivalent $\phi$ of the WL-kernel.
+- Run GCN and GIN over some small graphs where they are known to have different theoretical results. Showing these models can be trained and that they match theory will help build intuition around matching theory to experiment.
