@@ -6,3 +6,7 @@ wandb
 .backup
 tmp
 **/__pycache__/**
+.DS_Store
+.dendron.*
+.dendron.ws
+.dendron.port
